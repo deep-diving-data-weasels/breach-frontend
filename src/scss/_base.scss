@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  @extend %text-color;
+}
+body {
+  display: flex;
+  flex-flow: row wrap;
+}
+button {
+  @include button-effects();
+}

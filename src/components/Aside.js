@@ -1,15 +1,17 @@
 import React, { Component, Fragment } from 'react';
-//TODO: linter error for why
+
 class Aside extends Component {
   render (){
     return (
       <Fragment>
         <aside>
           <ul>
-            <p>TBD</p>
-            <p>TBD</p>
-            <p>TBD</p>
-            <p>TBD</p>
+            <div class ="logo">
+            <p><img src="image/github.png" class ="logoImg"/> </p>
+            <p><img src="image/linkedIn.png" class ="logoImg"/> </p>
+            </div>
+
+            
           </ul>
         </aside>
       </Fragment>

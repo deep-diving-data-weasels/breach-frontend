@@ -1,0 +1,24 @@
+$main-background-color: #707271;
+$header-background-color: #4E8985;
+$aside-background-color: #3E4d50;
+$footer-background-color: #97A888;
+%text-color {
+  // font-family: ajds;
+  color: white;
+}
+@mixin button-effects () {
+  background-color: #97A888;
+  margin-left: 10px;
+  &:hover {
+    // box-shadow: 10px 5px 5px black;
+    background-color: #7d926b;
+  }
+}
+@mixin center-content () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin reset-list-style () {
+  list-style: none;
+}
