@@ -10,6 +10,10 @@ import Footer from './Footer.js';
 let dataPwnd;
 let dataSocial;
 
+function handleError(error){
+  console.log('error: ', error);
+}
+
 // Search class
 export default  withRouter( class Search extends Component {
   constructor(props){
@@ -22,11 +26,11 @@ export default  withRouter( class Search extends Component {
   async searchPwnd(email) {
    //for local testing
     // const url = "http://localhost:3000/apiPwnd";
-    // const url = 'https://operation-breach.herokuapp.com/apiPwnd';
     const url = 'https://operation-breach.herokuapp.com/apiPwnd';
     superagent.get(url)
       .query({data: email})
       .then(res => {
+        console.log('res: ', res);
         dataPwnd = res.body;
       console.log(dataPwnd);
       this.props.callback({pwndResult: dataPwnd});     
@@ -36,11 +40,11 @@ export default  withRouter( class Search extends Component {
   async searchSocial(email) {
    //for local testing
     // const url = "http://localhost:3000/apiSocial";
-    // const url = 'https://operation-breach.herokuapp.com/apiSocial';    
-    const url = 'https://operation-breach.herokuapp.com/apiPwnd';
+    const url = 'https://operation-breach.herokuapp.com/apiSocial';
     superagent.get(url)
       .query({data: email})
       .then(res => {
+        console.log('res: ', res);
         dataSocial = res.body;
       console.log(dataSocial);
       this.props.callback({socialResult: dataSocial});
@@ -53,8 +57,9 @@ export default  withRouter( class Search extends Component {
     let email = event.target["email"].value;
     await this.searchPwnd(email);
     await this.searchSocial(email).then( ()=>{
-      this.props.history.push("/results");
+      console.log('social.then');
     });
+    this.props.history.push("/results");
   }
 
   render () {
