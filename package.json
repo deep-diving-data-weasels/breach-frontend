@@ -36,7 +36,7 @@
     ]
   },
   "description": "If disagreements arise during the production of Operation Breach, the following procedures will be followed in order to facilitate effective discourse and reach a commonly agreed upon solution in a timely manner.",
-  "main": "server.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deep-diving-data-weasels/operation-breach.git"
