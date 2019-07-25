@@ -48,17 +48,15 @@ export default  withRouter( class Search extends Component {
         dataSocial = res.body;
       console.log(dataSocial);
       this.props.callback({socialResult: dataSocial});
-      // this line must be call on the last API route 
     });
   } // searchSocial end
-
+  
   async submitHandle(event){
     event.preventDefault();
     let email = event.target["email"].value;
     await this.searchPwnd(email);
-    await this.searchSocial(email).then( ()=>{
-      console.log('social.then');
-    });
+    await this.searchSocial(email);
+    // this line must be call after the last API route
     this.props.history.push("/results");
   }
 
