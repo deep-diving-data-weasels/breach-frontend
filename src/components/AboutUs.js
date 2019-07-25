@@ -9,8 +9,7 @@ export default class AboutUs extends Component {
     return (
       <Fragment>
         <Header />
-         <header />
-                <main>
+        <main>
           <div>
             <div>
               <div class = "Image" /> 
