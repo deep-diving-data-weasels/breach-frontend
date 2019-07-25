@@ -21,7 +21,8 @@ export default  withRouter( class Search extends Component {
 
   async searchPwnd(email) {
    //for local testing
-    // const backEndURL = "http://localhost:3000/apiPwnd";
+    // const url = "http://localhost:3000/apiPwnd";
+    // const url = 'https://operation-breach.herokuapp.com/apiPwnd';
     const url = 'https://operation-breach.herokuapp.com/apiPwnd';
     superagent.get(url)
       .query({data: email})
@@ -34,8 +35,9 @@ export default  withRouter( class Search extends Component {
   } // searchPwnd end
   async searchSocial(email) {
    //for local testing
-    // const backEndURL = "http://localhost:3000/apiSocial";
-    const url = 'https://operation-breach.herokuapp.com/apiSocial';    
+    // const url = "http://localhost:3000/apiSocial";
+    // const url = 'https://operation-breach.herokuapp.com/apiSocial';    
+    const url = 'https://operation-breach.herokuapp.com/apiPwnd';
     superagent.get(url)
       .query({data: email})
       .then(res => {
