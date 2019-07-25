@@ -44,7 +44,6 @@ export default  withRouter( class Search extends Component {
     superagent.get(url)
       .query({data: email})
       .then(res => {
-        console.log('res: ', res);
         dataSocial = res.body;
       console.log(dataSocial);
       this.props.callback({socialResult: dataSocial});
@@ -74,7 +73,7 @@ export default  withRouter( class Search extends Component {
             <button type="submit" value="submit">Search</button>
           </form>
           </div>
-          <h3>placeholder</h3>
+          <h3>Our Promise</h3>
           <p>we don't sell any kind of Password</p>
 
           <Aside />
