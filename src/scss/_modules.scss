@@ -63,8 +63,13 @@
     background-color: $footer-background-color;
     height: 10vh;
     width: 100vw;
-  }
+    div {
+      display: flex;
+      justify-content: center;
 
+    }
+  }
+//-------------------------Results Main-------------------
   #resultSection{
     width:100%;
     justify-content: center;
@@ -74,12 +79,14 @@
   #pwndSide{
     display: flex;
     width: 50%;
-    flex-direction: column;
+    flex-flow: column wrap;
+    align-items: center;
   }
   #socialSide{
     display: flex;
     width: 50%;
-    flex-direction: column;
+    flex-flow: column wrap;
+    align-items: center;
   }
   .PwndResult{
     display: flex;
@@ -97,6 +104,11 @@
     *{
       font-size: 1.2em;
     }
+    div {
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
   .SocialResult{
     display: flex;
@@ -108,13 +120,18 @@
       text-decoration: underline;
     }
     a{
-      color:blue;
+      color: lightblue;
     }
     *{
       font-size: 1.2em;
     }
+    div {
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
-
+//--------------------------------------------------------
   .logoImg{
     height: 25px;
     width: 25px;

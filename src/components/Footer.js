@@ -11,7 +11,9 @@ export default class Footer extends Component {
     return (
       <Fragment>
         <footer>
-        <a title='Realtime application protection' href='https://www.sqreen.com/?utm_source=badge'><img src='https://s3-eu-west-1.amazonaws.com/sqreen-assets/badges/20171107/sqreen-dark-badge.svg' alt='Sqreen | Runtime Application Protection' /></a>
+          <div>
+            <a title='Realtime application protection' href='https://www.sqreen.com/?utm_source=badge'><img src='https://s3-eu-west-1.amazonaws.com/sqreen-assets/badges/20171107/sqreen-dark-badge.svg' alt='Sqreen | Runtime Application Protection' /></a>
+          </div>
         </footer>
       </Fragment>
     );
