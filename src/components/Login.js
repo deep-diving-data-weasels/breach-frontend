@@ -32,31 +32,31 @@ export default class Login extends Component {
   
   loginClick(event){
     //TODO: backURL - Deploy
-     event.preventDefault();
-     //for local testing
-     // const backEndURL = 'http://localhost:3000/pg';
-     const url = 'https://operation-breach.herokuapp.com/pg';
-     if ( validateEmail(event.target['username'].value) ){
-       superagent.get(url)
-         .query({username: event.target['username'].value, password:event.target['password'].value})
-         .then(res => {
-           console.log('res.body:', res.body);
-           console.log(res.status);
-           if (res.status === 202 ){
-             console.log('you hit 202');
-             alert('User Authenticated.  Welcome back.')
-           } else if (res.status === 201){
-             console.log('you hit 201');
-             alert('User created.  Welcome to OP Breach.')
-           }
-         //TODO: check flag, if correct, move to search.
-         this.props.history.push("/search");
-         //TODO: if it's not correct, prompt and do nothing.
-         }).catch(e=>console.error(e));
-     }
-     else{
-       alert("Please enter a Valid Email address.");
-     }
+    event.preventDefault();
+    //for local testing
+    // const backEndURL = 'http://localhost:3000/pg';
+    const url = 'https://operation-breach.herokuapp.com/pg';
+    if ( validateEmail(event.target['username'].value) ){
+      superagent.get(url)
+        .query({username: event.target['username'].value, password:event.target['password'].value})
+        .then(res => {
+          console.log('res.body:', res.body);
+          console.log(res.status);
+          if (res.status === 202 ){
+            console.log('you hit 202');
+            alert('User Authenticated.  Welcome back.')
+          } else if (res.status === 201){
+            console.log('you hit 201');
+            alert('User created.  Welcome to OP Breach.')
+          }
+        //TODO: check flag, if correct, move to search.
+        this.props.history.push("/search");
+        //TODO: if it's not correct, prompt and do nothing.
+        }).catch(e=>console.error(e));
+    }
+    else{
+      alert("Please enter a Valid Email address.");
+    }
    } // loginClick end
   
   /*
