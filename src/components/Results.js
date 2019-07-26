@@ -29,7 +29,7 @@ class SocialResult extends Component{
         <h3>{this.props.resObj.user.name}</h3>
         <img src = {this.props.resObj.image}></img>
         <p>Date posted: {this.props.resObj.posted}</p>
-        <p>URL: <a href={this.props.resObj.url}>{this.props.resObj.url}</a></p>
+        <p id="socialResultUrl">URL: <a href={this.props.resObj.url}>{this.props.resObj.url}</a></p>
         <p>{this.props.resObj.text}</p>
       </div>
     );
@@ -67,27 +67,23 @@ export default class Results extends Component {
           <section id="resultSection">
             <div id='pwndSide'>
               <h2>PWND Results</h2>
-              <div>
-                {
-                  (this.state.width <= 560) 
-                  ? 
-                  this.props.apiPwnd.splice(0,2).map( (pwndObj,idx) => <PwndResult resObj={pwndObj}/>) 
-                  :
-                  this.props.apiPwnd.map( (pwndObj,idx) => <PwndResult resObj={pwndObj}/>)
-                }
-              </div>
+              {
+                (this.state.width <= 560) 
+                ? 
+                this.props.apiPwnd.splice(0,2).map( (pwndObj,idx) => <PwndResult resObj={pwndObj}/>) 
+                :
+                this.props.apiPwnd.map( (pwndObj,idx) => <PwndResult resObj={pwndObj}/>)
+              }
             </div>
             <div id='socialSide'>
               <h2>Social Results</h2>
-              <div>
-                {
-                  (this.state.width <= 560) 
-                  ?
-                  this.props.apiSocial.posts.splice(0,2).map( (socialObj,idx) => <SocialResult resObj={socialObj}/>)
-                  :
-                  this.props.apiSocial.posts.map( (socialObj,idx) => <SocialResult resObj={socialObj}/>)
-                }
-              </div>
+              {
+                (this.state.width <= 560) 
+                ?
+                this.props.apiSocial.posts.splice(0,2).map( (socialObj,idx) => <SocialResult resObj={socialObj}/>)
+                :
+                this.props.apiSocial.posts.map( (socialObj,idx) => <SocialResult resObj={socialObj}/>)
+              }
             </div>
           </section>
         </main>

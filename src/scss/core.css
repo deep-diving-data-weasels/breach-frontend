@@ -167,6 +167,7 @@
   }
   .PwndResult h3 {
     color: darkgoldenrod;
+    background: #4E8985;
     text-decoration: underline;
   }
   .PwndResult a {
@@ -198,6 +199,7 @@
   }
   .SocialResult h3 {
     color: darkgoldenrod;
+    background: #4E8985;
     text-decoration: underline;
   }
   .SocialResult a {
@@ -233,7 +235,7 @@
     font-size: 1.1em;
   }
   #aboutUs a {
-    color: blue;
+    color: lightblue;
   }
 }
 
@@ -359,16 +361,16 @@
   }
   #resultSection {
     width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   }
   #pwndSide {
     display: -webkit-box;
@@ -387,14 +389,19 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 50%;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    width: 50%;
+    -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  #socialSide h2 {
+    text-align: center;
   }
   .PwndResult {
     display: -webkit-box;
@@ -414,6 +421,7 @@
   .PwndResult h3 {
     font-size: 1.8em;
     color: darkgoldenrod;
+    background: #4E8985;
     text-decoration: underline;
   }
   .PwndResult a {
@@ -432,6 +440,7 @@
         flex-wrap: wrap;
   }
   .SocialResult {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -447,6 +456,7 @@
   .SocialResult h3 {
     font-size: 1.8em;
     color: darkgoldenrod;
+    background: #4E8985;
     text-decoration: underline;
   }
   .SocialResult a {
@@ -457,6 +467,11 @@
   }
   .SocialResult * {
     font-size: 1.2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .SocialResult div {
     padding: 10px;
@@ -465,6 +480,16 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  #socialResultUrl {
+    width: 100%;
+  }
+  #socialResultUrl a {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
   }
   .logoImg {
     height: 25px;
@@ -511,7 +536,7 @@
     font-size: 1.1em;
   }
   #aboutUs div a {
-    color: blue;
+    color: lightblue;
   }
   #aboutUs div img {
     width: 125px;
