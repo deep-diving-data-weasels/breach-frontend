@@ -51,16 +51,20 @@ export default class Results extends Component {
         <main>
           <section id="resultSection">
             <div id='pwndSide'>
-            <h2>PWND Results</h2>
-            {
-              this.props.apiPwnd.map( (pwndObj,idx) => <PwndResult resObj={pwndObj}/>)
-            }
+              <h2>PWND Results</h2>
+              <div>
+                {
+                  this.props.apiPwnd.map( (pwndObj,idx) => <PwndResult resObj={pwndObj}/>)
+                }
+              </div>
             </div>
             <div id='socialSide'>
-            <h2>Social Results</h2>
-            {
-              this.props.apiSocial.posts.map( (socialObj,idx) => <SocialResult resObj={socialObj}/>)
-            }
+              <h2>Social Results</h2>
+              <div>
+                {
+                  this.props.apiSocial.posts.map( (socialObj,idx) => <SocialResult resObj={socialObj}/>)
+                }
+              </div>
             </div>
           </section>
         </main>
