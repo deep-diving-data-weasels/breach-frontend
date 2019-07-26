@@ -83,9 +83,9 @@
 //-------------------------Results Main-------------------
   #resultSection{
     width:100%;
-    justify-content: center;
+    // justify-content: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   #pwndSide{
     display: flex;
