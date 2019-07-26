@@ -308,14 +308,15 @@
     background-color: #97A888;
     height: 10vh;
     width: 100vw;
-  }
-  footer div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #resultSection {
     width: 100%;
@@ -372,11 +373,15 @@
     border: 2px black solid;
   }
   .PwndResult h3 {
+    font-size: 1.8em;
     color: darkgoldenrod;
     text-decoration: underline;
   }
   .PwndResult a {
-    color: blue;
+    color: lightblue;
+  }
+  .PwndResult p {
+    padding: 10px;
   }
   .PwndResult * {
     font-size: 1.2em;
@@ -403,11 +408,15 @@
     border: 2px black solid;
   }
   .SocialResult h3 {
+    font-size: 1.8em;
     color: darkgoldenrod;
     text-decoration: underline;
   }
   .SocialResult a {
     color: lightblue;
+  }
+  .SocialResult p {
+    padding: 10px;
   }
   .SocialResult * {
     font-size: 1.2em;
