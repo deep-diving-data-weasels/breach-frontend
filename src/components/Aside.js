@@ -10,7 +10,7 @@ class Aside extends Component {
           </p>
           <div id='promise'>
             <img src="image/github.png" class ="logoImg"/>
-            <img src="./../../public/image/linkedIn.png" class ="logoImg"/>
+            <img src="image/Linkedin.png" class ="logoImg"/>
           </div>
         </aside>
       </Fragment>
