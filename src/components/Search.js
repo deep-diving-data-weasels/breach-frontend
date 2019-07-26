@@ -14,6 +14,11 @@ function handleError(error){
   console.log('error: ', error);
 }
 
+function validateEmail(email){
+  let regex =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/m;
+  return regex.test(email);
+};
+
 // Search class
 export default  withRouter( class Search extends Component {
   constructor(props){
@@ -53,10 +58,17 @@ export default  withRouter( class Search extends Component {
   async submitHandle(event){
     event.preventDefault();
     let email = event.target["email"].value;
-    await this.searchPwnd(email);
-    await this.searchSocial(email);
-    // this line must be call after the last API route
-    this.props.history.push("/results");
+
+    if (validateEmail(email)){
+      await this.searchPwnd(email);
+      await this.searchSocial(email);
+      // this line must be call after the last API route
+      this.props.history.push("/results");
+    }
+    else {
+      alert("Please enter a Valid Email address.");
+    }
+
   }
 
   render () {
@@ -65,18 +77,16 @@ export default  withRouter( class Search extends Component {
         <Header />
         <Aside />
         <main>
-          <h1>Welcome: Operation Breach</h1>
-          <p>Description of our services</p>
+          <h1>Welcome to Operation Breach</h1>
+          <p>Login.<br/>Check to see where your information has been stolen in a hack.<br/>See where that email has been tagged on the internet.</p>
+          <br/>  
+          <p><strong>Knowledge === Power.</strong></p>
           <div>
           <form onSubmit = {this.submitHandle}>
-            {/* <label for="email">email: </label> */}
             <input name="email" type="text" placeholder="E-mail Address "></input>
             <button type="submit" value="submit">Search</button>
           </form>
           </div>
-          <h3>Our Promise</h3>
-          <p>we don't sell any kind of Password</p>
-
         </main>
         <Footer />
       </Fragment>

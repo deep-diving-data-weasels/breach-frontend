@@ -16,6 +16,12 @@ function handleError (err, res) {
   if (res) res.status(500).send('Not authorized for access');
 }
 
+function validateEmail(email){
+  let regex =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/m;
+  return regex.test(email);
+};
+
+
 // Login class 
 export default class Login extends Component {
   constructor(props){
@@ -27,20 +33,21 @@ export default class Login extends Component {
   loginClick(event){
    //TODO: backURL - Deploy
     event.preventDefault();
-    console.log(event.target['username'].value);
-    console.log(event.target['password'].value);
-
     //for local testing
     // const backEndURL = 'http://localhost:3000/pg';
     const url = 'https://operation-breach.herokuapp.com/pg';
-
-    superagent.get(url)
-      .query({username: event.target['username'].value, password:event.target['password'].value})
-      .then(res => {
-      //TODO: check flag, if correct, move to search.
-      this.props.history.push("/search");
-      //TODO: if it's not correct, prompt and do nothing.
-      }).catch(e=>console.error(e));
+    if ( validateEmail(event.target['username'].value) ){
+      superagent.get(url)
+        .query({username: event.target['username'].value, password:event.target['password'].value})
+        .then(res => {
+        //TODO: check flag, if correct, move to search.
+        this.props.history.push("/search");
+        //TODO: if it's not correct, prompt and do nothing.
+        }).catch(e=>console.error(e));
+    }
+    else{
+      alert("Please enter a Valid Email address.");
+    }
   } // loginClick end
   
   /*
@@ -58,12 +65,10 @@ export default class Login extends Component {
           <p>Description of our services</p>
           <form onSubmit={this.loginClick}>
             <div>
-              {/* <label for="username" >Username: </label> */}
               <input name="username" id="username" type="text" placeholder="Username Here"></input>
             </div>
             <div>
-              {/* <label for="password">Password</label> */}
-              <input name="password" id="password" type="password" placeholder="Password"></input>
+              <input name="password" id="password" type="password" placeholder="Password" minlength="1"></input>
             </div>
             <button type="submit" value="submit">Log In</button>
           </form>
