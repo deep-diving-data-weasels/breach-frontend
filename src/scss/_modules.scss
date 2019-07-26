@@ -3,10 +3,157 @@
   width: 45px;
 }
 
-
+//mobile
 @media (max-width: 560px) {
-  
+  body {
+    max-width: 560px;
+  }
+
+  header{
+    background-color: $header-background-color;
+    height: 10vh;
+    width: 100vw;
+    // @include button-effects();
+    @include reset-list-style();
+    display: flex;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      align-items: flex-start;
+      a {
+        padding: 5px;
+      }
+    }
+    div {
+      display: flex;
+      align-items: flex-end;
+      a {
+      padding: 10px;
+      }
+    }
+  }
+
+  aside {
+    background-color: $aside-background-color;
+    width: 100%;
+    display: flex;
+    // flex-flow: column wrap;
+    ul{
+      padding-inline-start: 0px;
+      display: flex;
+      justify-content: center;
+    }
+    li {
+      padding: 15px;
+    }
+    p {
+      text-align: center;
+    }
+
+  }
+  #kp{
+    display: none;
+  }
+
+  main {
+    min-height: 80vh;
+    background-color: $main-background-color;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    form {
+      
+      div {
+        padding: 15px;
+        display: flex;
+        flex-flow: column wrap;
+      }
+    }
+  }
+  footer {
+    background-color: $footer-background-color;
+    height: 10vh;
+    width: 100vw;
+    div {
+      display: flex;
+      justify-content: center;
+
+    }
+  }
+//-------------------------Results Main-------------------
+  #resultSection{
+    width:100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+  #pwndSide{
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  #socialSide{
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .PwndResult{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px black solid;
+    h3{
+      color: darkgoldenrod;
+      text-decoration: underline;
+    }
+    a{
+      color:blue;
+    }
+    *{
+      font-size: 1.2em;
+    }
+    div {
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .SocialResult{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px black solid;
+    h3{
+      color: darkgoldenrod;
+      text-decoration: underline;
+    }
+    a{
+      color: lightblue;
+    }
+    *{
+      font-size: 1.2em;
+    }
+    div {
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+//--------------------------------------------------------
+  .logoImg{
+    height: 25px;
+    width: 25px;
+  }
+
+  .Image {
+    width: 75px;
+    height: 100px;
+  }
 }
+//desktop
 @media (min-width: 561px ) {
   body {
     max-width: 960px;
