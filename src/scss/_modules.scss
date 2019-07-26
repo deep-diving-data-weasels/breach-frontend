@@ -15,7 +15,6 @@
     background-color: $header-background-color;
     height: 10vh;
     width: 100vw;
-    // @include button-effects();
     @include reset-list-style();
     display: flex;
     justify-content: space-between;
@@ -63,11 +62,7 @@
     background-color: $footer-background-color;
     height: 10vh;
     width: 100vw;
-    div {
-      display: flex;
-      justify-content: center;
-
-    }
+    @include center-content();
   }
 //-------------------------Results Main-------------------
   #resultSection{
@@ -95,11 +90,15 @@
     flex-wrap: wrap;
     border: 2px black solid;
     h3{
+      font-size: 1.8em;
       color: darkgoldenrod;
       text-decoration: underline;
     }
     a{
-      color:blue;
+      color:lightblue;
+    }
+    p {
+      padding: 10px;
     }
     *{
       font-size: 1.2em;
@@ -116,11 +115,15 @@
     align-items: center;
     border: 2px black solid;
     h3{
+      font-size: 1.8em;
       color: darkgoldenrod;
       text-decoration: underline;
     }
     a{
       color: lightblue;
+    }
+    p {
+      padding: 10px;
     }
     *{
       font-size: 1.2em;
