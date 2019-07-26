@@ -152,6 +152,21 @@
     width: 75px;
     height: 100px;
   }
+
+  // About Us Moblie
+  #aboutUs{
+    margin-top: 5px;
+    margin-left: 8px;
+    h3{
+      font-size: 1.3em;
+    }
+    p{
+      font-size: 1.1em;
+    }
+    a{
+      color: blue;
+    }
+  }
 }
 //desktop
 @media (min-width: 561px ) {
