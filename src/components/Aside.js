@@ -5,17 +5,13 @@ class Aside extends Component {
     return (
       <Fragment>
         <aside>
-          <ul>
-            <div class ="logo">
-            <p><img src="image/github.png" class ="logoImg"/> </p>
-            <p><img src="image/linkedIn.png" class ="logoImg"/> </p>
-            </div>
-            <p><strong>Knowledge = Power.</strong></p>
-            <p>Our Promise: <br/>We use SQREEN for securing your data requests from this site.<br/>We will not sell, release, or store results of your searches.
-            </p>
-
-            
-          </ul>
+          <p><strong>Knowledge = Power.</strong></p>
+          <p id="kp">Our Promise: <br/>We use SQREEN for securing your data requests from this site.<br/>We will not sell, release, or store results of your searches.
+          </p>
+          <div id='promise'>
+            <img src="image/github.png" class ="logoImg"/>
+            <img src="image/Linkedin.png" class ="logoImg"/>
+          </div>
         </aside>
       </Fragment>
     );//end return
