@@ -83,9 +83,9 @@
 //-------------------------Results Main-------------------
   #resultSection{
     width:100%;
-    justify-content: center;
+    // justify-content: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   #pwndSide{
     display: flex;
@@ -152,8 +152,23 @@
     width: 75px;
     height: 100px;
   }
+
+  //------- About Us Moblie -------------------
+  #aboutUs{
+    margin-top: 5px;
+    margin-left: 8px;
+    h3{
+      font-size: 1.3em;
+    }
+    p{
+      font-size: 1.1em;
+    }
+    a{
+      color: blue;
+    }
+  }
 }
-//desktop
+//desktop *******************
 @media (min-width: 561px ) {
   body {
     max-width: 960px;
@@ -186,6 +201,19 @@
     width: 20%;
     display: flex;
     flex-flow: column wrap;
+    .logo{
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    #promise{
+      margin-top: 50px;
+      margin-right: 10px;
+    }
+    p{
+      margin-top: 10px;
+    }
     li {
       padding: 15px;
     }
@@ -211,7 +239,7 @@
     width: 100vw;
     @include center-content();
   }
-//-------------------------Results Main-------------------
+//-------------------------Results Desktop-------------------
   #resultSection{
     width:100%;
     justify-content: center;
@@ -244,11 +272,9 @@
     a{
       color:lightblue;
     }
-    p {
-      padding: 10px;
-    }
     *{
-      font-size: 1.2em;
+      font-size: 1.1em;
+      margin-left: 10px;
     }
     div {
       padding: 10px;
@@ -290,5 +316,25 @@
   .Image {
     width: 100px;
     height: 125px;
+  }
+
+  //------- About Us Desktop -------------------
+  #aboutUs{
+    margin-top: 5px;
+    margin-left: 8px;
+    h3{
+      font-size: 1.3em;
+      color: rgb(222, 170, 38);
+    }
+    p{
+      font-size: 1.1em;
+    }
+    a{
+      color: blue;
+    }
+    img{
+      width: 125px;
+      height: 135px;
+    }
   }
 }
