@@ -10,7 +10,7 @@ class Aside extends Component {
             <p><img src="image/github.png" class ="logoImg"/> </p>
             <p><img src="image/linkedIn.png" class ="logoImg"/> </p>
             </div>
-            <p><strong>Knowledge === Power.</strong></p>
+            <p><strong>Knowledge = Power.</strong></p>
             <p>Our Promise: <br/>We use SQREEN for securing your data requests from this site.<br/>We will not sell, release, or store results of your searches.
             </p>
 

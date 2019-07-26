@@ -78,9 +78,8 @@ export default  withRouter( class Search extends Component {
         <Aside />
         <main>
           <h1>Welcome to Operation Breach</h1>
-          <p>Login.<br/>Check to see where your information has been stolen in a hack.<br/>See where that email has been tagged on the internet.</p>
+          <p><b>Search</b> to see where your information has been stolen in a hack.<br/><b>See</b> where that email has been tagged on the internet.</p>
           <br/>  
-          <p><strong>Knowledge === Power.</strong></p>
           <div>
           <form onSubmit = {this.submitHandle}>
             <input name="email" type="text" placeholder="E-mail Address "></input>

@@ -62,7 +62,7 @@ export default class Login extends Component {
         <Aside />
         <main>
           <h1>Welcome: Operation Breach</h1>
-          <p>Description of our services</p>
+          <p><b>Login.</b><br/><b>Search</b> to see where your information has been stolen in a hack.<br/><b>See</b> where that email has been tagged on the internet.</p>
           <form onSubmit={this.loginClick}>
             <div>
               <input name="username" id="username" type="text" placeholder="Username Here"></input>
