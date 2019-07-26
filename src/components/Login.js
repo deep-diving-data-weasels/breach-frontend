@@ -58,18 +58,20 @@ export default class Login extends Component {
   render () {
     return (
       <Fragment>
-       <Header />
+        <Header />
+        <Aside />
         <main>
           <h1>Welcome: Operation Breach</h1>
           <p>Description of our services</p>
           <form onSubmit={this.loginClick}>
-            <label for="username" >Username: </label>
-            <input name="username" id="username" type="text" placeholder="Username Here"></input>
-            <label for="password">Password</label>
-            <input name="password" id="password" type="password" placeholder="Password" minlength="1"></input>
+            <div>
+              <input name="username" id="username" type="text" placeholder="Username Here"></input>
+            </div>
+            <div>
+              <input name="password" id="password" type="password" placeholder="Password" minlength="1"></input>
+            </div>
             <button type="submit" value="submit">Log In</button>
           </form>
-          <Aside />
         </main>
         <Footer />
       </Fragment>

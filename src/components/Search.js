@@ -75,6 +75,7 @@ export default  withRouter( class Search extends Component {
     return (
       <Fragment>
         <Header />
+        <Aside />
         <main>
           <h1>Welcome to Operation Breach</h1>
           <p>Login.<br/>Check to see where your information has been stolen in a hack.<br/>See where that email has been tagged on the internet.</p>
@@ -82,12 +83,10 @@ export default  withRouter( class Search extends Component {
           <p><strong>Knowledge === Power.</strong></p>
           <div>
           <form onSubmit = {this.submitHandle}>
-            <label for="email">email: </label>
             <input name="email" type="text" placeholder="E-mail Address "></input>
             <button type="submit" value="submit">Search</button>
           </form>
           </div>
-          <Aside />
         </main>
         <Footer />
       </Fragment>
